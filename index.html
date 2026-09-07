@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100711">
+<title>Happy Birthday Sinha (Sona) ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --p:#ff3f93;
+  --g:#ffd56a;
+  --bg:#0b0610
+}
+
+*{
+  box-sizing:border-box
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  margin:0;
+  background:radial-gradient(circle at 50% 0,#5d153e,#1d0a1c 42%,var(--bg) 80%);
+  color:#fff;
+  font-family:Poppins,Arial;
+  overflow-x:hidden
+}
+
+.stars{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    radial-gradient(#fff 1px,transparent 1px),
+    radial-gradient(#ff72b2 1px,transparent 1px);
+  background-size:70px 70px,110px 110px;
+  opacity:.22;
+  z-index:0
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  padding:13px 16px;
+  text-align:center;
+  background:#100712dd;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ff3f9344
+}
+
+nav b{
+  display:block;
+  color:var(--g);
+  font-family:Georgia;
+  font-style:italic;
+  margin-bottom:9px
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:8px;
+  letter-spacing:1.8px;
+  margin:0 5px;
+  opacity:.85
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:42px 18px;
+  position:relative;
+  z-index:1
+}
+
+.photos{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  width:100%
+}
+
+.photo-wrap{
+  position:relative;
+  width:min(72vw,330px);
+  padding:7px;
+  border:2px solid var(--g);
+  border-radius:150px 150px 24px 24px;
+  box-shadow:0 0 28px #ff3f9366,0 15px 40px #000b;
+  background:#140a16
+}
+
+.photo-wrap img{
+  display:block;
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:center;
+  border-radius:135px 135px 16px 16px
+}
+
+.photo-wrap:before,
+.photo-wrap:after{
+  content:'✦';
+  position:absolute;
+  color:var(--g);
+  font-size:22px;
+  text-shadow:0 0 12px #ffd56a;
+  z-index:2
+}
+
+.photo-wrap:before{
+  top:-12px;
+  left:14px
+}
+
+.photo-wrap:after{
+  top:18px;
+  right:-10px
+}
+
+.script{
+  font-family:'Great Vibes',cursive;
+  font-size:55px;
+  margin-top:28px
+}
+
+.title{
+  font-family:Georgia;
+  font-size:clamp(58px,18vw,88px);
+  line-height:.9;
+  margin:0;
+  background:linear-gradient(100deg,#fff,#ff8fbe,var(--g));
+  -webkit-background-clip:text;
+  color:transparent
+}
+
+.name{
+  font-family:'Great Vibes';
+  font-size:62px;
+  color:var(--g)
+}
+
+.divider{
+  color:var(--g);
+  font-size:23px
+}
+
+.hero p,
+.message p{
+  line-height:1.8;
+  color:#f8eaf2;
+  font-size:14px
+}
+
+.btn{
+  padding:13px 22px;
+  border:1px solid var(--p);
+  border-radius:999px;
+  background:#ff3f9315;
+  color:#fff;
+  box-shadow:0 0 25px #ff3f9344;
+  cursor:pointer;
+  font-size:14px
+}
+
+.section{
+  padding:70px 18px;
+  text-align:center;
+  max-width:1000px;
+  margin:auto
+}
+
+.section h2{
+  font-family:'Great Vibes';
+  font-size:37px;
+  color:var(--g);
+  font-weight:400
+}
+
+.message{
+  border-top:1px solid #ffd56a55;
+  border-bottom:1px solid #ffd56a55
+}
+
+.envelope{
+  font-size:100px;
+  color:#ff91bf;
+  filter:drop-shadow(0 0 25px #ff3f93)
+}
+
+.gallery{
+  min-height:45vh
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  max-width:760px;
+  margin:20px auto 0
+}
+
+.gallery-grid img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  border-radius:22px;
+  border:2px solid var(--g);
+  box-shadow:0 0 30px #ff3f9355;
+  transition:transform .25s ease,box-shadow .25s ease
+}
+
+.gallery-grid img:active{
+  transform:scale(.98)
+}
+
+.surprise{
+  min-height:85vh;
+  display:grid;
+  place-items:center
+}
+
+.cake-box{
+  width:min(94vw,560px);
+  padding:34px 18px;
+  border:1px solid #ff3f9366;
+  border-radius:28px;
+  background:#ffffff09;
+  box-shadow:0 0 55px #ff3f9325
+}
+
+.cake{
+  font-size:105px;
+  line-height:1;
+  animation:bounce 1.5s infinite
+}
+
+.flame{
+  display:inline-block;
+  animation:flicker .5s infinite alternate
+}
+
+.cake-box h2{
+  margin:12px 0
+}
+
+.confetti{
+  position:fixed;
+  top:-20px;
+  width:8px;
+  height:14px;
+  z-index:20;
+  animation:fall linear forwards
+}
+
+@keyframes bounce{
+  50%{
+    transform:translateY(-8px) scale(1.04)
+  }
+}
+
+@keyframes flicker{
+  to{
+    transform:scale(1.15) rotate(4deg)
+  }
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0
+  }
+}
+
+footer{
+  text-align:center;
+  padding:28px;
+  color:#cfa8bd
+}
+
+@media(min-width:760px){
+
+  nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-align:left;
+    padding:15px 5%
+  }
+
+  nav b{
+    margin:0
+  }
+
+  .hero{
+    flex-direction:row;
+    gap:4%;
+    text-align:center
+  }
+
+  .photos{
+    width:390px
+  }
+
+  .photo-wrap{
+    width:330px
+  }
+
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+}
+
+@media(max-width:380px){
+
+  .photo-wrap{
+    width:75vw
+  }
+
+  .script{
+    font-size:48px
+  }
+
+  .name{
+    font-size:55px
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<nav>
+  <b>For Sinha (Sona) ✨</b>
+
+  <div>
+    <a href="#home">HOME</a>
+    <a href="#wishes">WISHES</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#surprise">SURPRISE</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="home" class="hero">
+
+  <div class="photos">
+    <div class="photo-wrap">
+      <img src="tamanna.jpg" alt="Sinha (Sona)">
+    </div>
+  </div>
+
+  <div>
+
+    <div class="script">Happy</div>
+
+    <h1 class="title">Birthday</h1>
+
+    <div class="name">
+      Sinha (Sona)♡
+    </div>
+
+    <div class="divider">
+      ⌁ ♥ ⌁
+    </div>
+
+    <p>
+      Today is all about you! ✨<br>
+      Wishing you a day as beautiful, warm &amp; special as your heart. 💗
+    </p>
+
+    <button class="btn" onclick="go('wishes')">
+      Continue ›
+    </button>
+
+  </div>
+
+</section>
+
+
+<section id="wishes" class="section message">
+
+  <div class="envelope">
+    ♡
+  </div>
+
+  <div>
+
+    <h2>
+      A Little Message For You 💗
+    </h2>
+
+    <p>
+      Happy Birthday to the most special person in my life. ❤️🎂Many many happy returns of the day. May you take your time to build the life you truly want. I am always here for You........🤍<br>
+
+Loving you isn’t just a feeling for today,
+it’s a promise I want to keep for a lifetime.
+Through every happiness and every difficult moment,
+I want you by my side.<br>
+
+Time may change, seasons may pass,
+but my love for you will never fade.
+I love you today, I’ll love you tomorrow,
+and I’ll keep loving you for the rest of my life. 🤍<br>
+      
+     ✨
+    </p>
+
+    <button class="btn" onclick="go('gallery')">
+      See Gallery 📸
+    </button>
+
+  </div>
+
+</section>
+
+
+<section id="gallery" class="section gallery">
+
+  <h2>
+    Gallery 📸
+  </h2>
+
+  <div class="gallery-grid">
+
+    <img src="gallery1.jpeg" alt="Sinha (Sona) photo 1">
+
+    <img src="gallery2.jpeg" alt="Sinha (Sona) photo 2">
+
+    <img src="gallery3.jpeg" alt="Sinha (Sona) photo 3">
+
+    <img src="gallery4.jpeg" alt="Sinha (Sona) photo 4">
+
+  </div>
+
+</section>
+
+
+<section id="surprise" class="section surprise">
+
+  <div class="cake-box">
+
+    <div class="cake">
+      🎂<span class="flame">🕯️</span>
+    </div>
+
+    <h2>
+      Time to Celebrate! 🎉
+    </h2>
+
+    <p>
+      Make a wish, Sinha (Sona)!
+      May your day be full of happiness,
+      laughter and beautiful moments. 💖
+    </p>
+
+    <button class="btn" onclick="celebrate()">
+      🎉 Celebrate Birthday
+    </button>
+
+    <button
+      id="music"
+      class="btn"
+      onclick="toggleMusic()"
+      style="margin-left:6px"
+    >
+      🎵 Play Birthday Music
+    </button>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  Made with ♡ specially for Sinha (Sona)
+</footer>
+
+
+<audio id="birthdayAudio" preload="auto">
+  <source
+    src="Happy Birthday To You Ji - Funny Hindi Birthday Song (Part 1) - Funzoa Mimi Teddy, Krsna Solo.mp3"
+    type="audio/mpeg"
+  >
+</audio>
+
+
+<script>
+
+const birthdayAudio =
+  document.getElementById('birthdayAudio');
+
+let playing = false;
+
+
+function go(id){
+
+  document
+    .getElementById(id)
+    .scrollIntoView({
+      behavior:'smooth'
+    });
+
+}
+
+
+function toggleMusic(){
+
+  const btn =
+    document.getElementById('music');
+
+  if(playing){
+
+    birthdayAudio.pause();
+
+    birthdayAudio.currentTime = 0;
+
+    playing = false;
+
+    btn.textContent =
+      '🎵 Play Birthday Music';
+
+    return;
+  }
+
+  birthdayAudio
+    .play()
+    .then(()=>{
+
+      playing = true;
+
+      btn.textContent =
+        '🔊 Music Playing';
+
+    })
+    .catch(()=>{
+
+      btn.textContent =
+        '⚠️ Tap to Play Music';
+
+    });
+
+}
+
+
+birthdayAudio.addEventListener(
+  'ended',
+  ()=>{
+
+    playing = false;
+
+    document.getElementById('music')
+      .textContent =
+      '🎵 Play Birthday Music';
+
+  }
+);
+
+
+function celebrate(){
+
+  for(let i=0;i<100;i++){
+
+    const e =
+      document.createElement('i');
+
+    e.className = 'confetti';
+
+    e.style.left =
+      Math.random()*100+'vw';
+
+    e.style.background =
+      'hsl(' +
+      Math.random()*360 +
+      ' 85% 70%)';
+
+    e.style.animationDuration =
+      2 + Math.random()*3 + 's';
+
+    document.body.appendChild(e);
+
+    setTimeout(
+      ()=>e.remove(),
+      5500
+    );
+
+  }
+
+
+  document
+    .querySelector('#surprise h2')
+    .textContent =
+    '🎉 Happy Birthday, Sinha (Sona)! 🎉';
+
+
+  document
+    .querySelector('#surprise p')
+    .textContent =
+    'Today is your special day — make a wish, smile and celebrate! 💕';
+
+
+  toggleMusic();
+
+}
+
+</script>
+
+</body>
+</html>
